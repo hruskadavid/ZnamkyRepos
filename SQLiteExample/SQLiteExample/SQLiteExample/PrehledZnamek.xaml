@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SQLiteExample.PrehledZnamek">
+  <ContentPage.Content>
+    <Grid >
+      <Grid.ColumnDefinitions >
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+
+      <Grid.RowDefinitions>
+        <RowDefinition Height="2*"/>
+        <RowDefinition Height="8*"/>
+      </Grid.RowDefinitions>
+
+      <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+        <Grid.ColumnDefinitions >
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="0.6*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Text="Znamky" Grid.Row="0" Grid.Column="0" FontSize="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" Margin="10" />
+        <Button Clicked="zpet" Text="Zpet" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+      </Grid>
+
+      <ListView x:Name="ListViewFormatted" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="0" IsGroupingEnabled="false">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <ViewCell.ContextActions>
+                <MenuItem Clicked="OnDelete" CommandParameter="{Binding ID}"
+                   Text="Smazat" IsDestructive="True" />
+              </ViewCell.ContextActions>
+
+              <Grid HeightRequest="100">
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="*" />
+                  <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*"/>
+                  <ColumnDefinition Width="*"/>
+                  <ColumnDefinition Width="*"/>
+                  <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="{Binding Predmet}" Grid.RowSpan="2" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+
+                <Label Text="Známka:" Grid.Row="0"  Grid.Column="1" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
+                <Label Text="{Binding Hodnoceni}" Grid.Row="1"  Grid.Column="1" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
+
+                <Label Text="Váha:" Grid.Row="0"  Grid.Column="2" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
+                <Label Text="{Binding Vaha}" Grid.Row="1"  Grid.Column="2" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
+
+                <!--									<Label Text="Absence:" Grid.Row="0"  Grid.Column="3" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>-->
+                <!--									<Label Text="{Binding Absence}" Grid.Row="1"  Grid.Column="3" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>-->
+
+
+              </Grid>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </Grid>
+  </ContentPage.Content>
+</ContentPage>
