@@ -43,5 +43,6 @@ namespace SQLiteExample
                 return _database;
             }
         }
+        
     }
 }

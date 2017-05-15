@@ -27,7 +27,12 @@ namespace SQLiteExample
             Znamky.Add(new ZnamkaCislo { CoZnamka = "5" });
             ZnamkyView.ItemsSource = Znamky;
         }
-
+        void SelectedItemMethod(object sender, SelectedItemChangedEventArgs e)
+        {
+            
+            DisplayAlert("Item Selected", e.SelectedItem.ToString(), "Ok");
+            //((ListView)sender).SelectedItem = null; //uncomment line if you want to disable the visual selection state.
+        }
         public void ulozit(object sender, EventArgs args)
         {
             //vytvoření spojení s db
@@ -36,8 +41,9 @@ namespace SQLiteExample
             Database userDatabase = App.Database;
 
             //list pro dočasne uložení
+            
             Znamka item = new Znamka();
-            item.Hodnoceni = Convert.ToInt16(znamka.Text);
+            item.Hodnoceni = Convert.ToInt16(ZnamkyView);
             item.Predmet = predmet.Text;
             item.Vaha = Convert.ToInt16(vaha.Text);
 
