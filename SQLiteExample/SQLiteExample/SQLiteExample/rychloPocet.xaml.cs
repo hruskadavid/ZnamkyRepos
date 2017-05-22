@@ -30,7 +30,7 @@ namespace SQLiteExample
             System.Diagnostics.Debug.WriteLine(y);
 
             prumer.Text = Convert.ToString(Math.Round(y, 2));
-            //ListViewFormatted.ItemsSource = "- ";
+            ListViewFormatted.ItemsSource = " ";
             ListViewFormatted.ItemsSource = znamka;
 
         }
