@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 using Xamarin.Forms;
 
@@ -26,8 +28,9 @@ namespace SQLiteExample
 
             double y = znamka.Average(x => x.PravaZnamka());
             System.Diagnostics.Debug.WriteLine(y);
-            prumer.Text = Convert.ToString(Math.Round(y, 2) / 10);
-            ListViewFormatted.ItemsSource = " ";
+
+            prumer.Text = Convert.ToString(Math.Round(y, 2));
+            //ListViewFormatted.ItemsSource = "- ";
             ListViewFormatted.ItemsSource = znamka;
 
         }

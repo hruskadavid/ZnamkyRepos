@@ -18,7 +18,10 @@ namespace SQLiteExample
         public int Hodnoceni { get; set; }
         public double PravaZnamka()
         {
-            return Vaha * Hodnoceni;
+            double x;
+            if (Vaha >= 10) { x = Vaha * Hodnoceni / Vaha; }
+            else { x = Vaha * Hodnoceni; }
+            return x;
         }
 
         public override string ToString()

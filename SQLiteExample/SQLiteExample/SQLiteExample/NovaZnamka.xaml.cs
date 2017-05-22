@@ -14,8 +14,15 @@ namespace SQLiteExample
         public class ZnamkaCislo
         {
             public string CoZnamka { get; set; }
+            public override string ToString()
+            {
+                return CoZnamka;
+            }
         }
+        
         ObservableCollection<ZnamkaCislo> Znamky = new ObservableCollection<ZnamkaCislo>();
+        private string lel;
+
         public NovaZnamka()
         {
 
@@ -30,7 +37,7 @@ namespace SQLiteExample
         void SelectedItemMethod(object sender, SelectedItemChangedEventArgs e)
         {
             
-            DisplayAlert("Item Selected", e.SelectedItem.ToString(), "Ok");
+             lel = e.SelectedItem.ToString();
             //((ListView)sender).SelectedItem = null; //uncomment line if you want to disable the visual selection state.
         }
         public void ulozit(object sender, EventArgs args)
@@ -43,7 +50,7 @@ namespace SQLiteExample
             //list pro dočasne uložení
             
             Znamka item = new Znamka();
-            item.Hodnoceni = Convert.ToInt16(ZnamkyView);
+            item.Hodnoceni = Convert.ToInt16(lel);
             item.Predmet = predmet.Text;
             item.Vaha = Convert.ToInt16(vaha.Text);
 

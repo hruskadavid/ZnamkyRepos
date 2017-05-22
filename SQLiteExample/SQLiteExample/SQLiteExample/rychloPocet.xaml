@@ -47,8 +47,8 @@
       <Label Text="Pruměr je:" Grid.Row="2" Grid.Column="0" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
       <Label x:Name="prumer" Text="0" Grid.Row="2" Grid.Column="1" FontSize="25" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" />
 
-      <Entry Keyboard="Numeric" Placeholder="Známka"  Margin="10" x:Name="hodnoceni" Grid.ColumnSpan="2" Grid.Row="3" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" />
-      <Entry Keyboard="Numeric" Placeholder="Váha" Margin="10" x:Name="vaha" Grid.ColumnSpan="2" Grid.Row="3" Grid.Column="0"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+      <Entry Placeholder="Známka"  Margin="10" x:Name="hodnoceni" Grid.ColumnSpan="2" Grid.Row="3" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" />
+      <Entry Placeholder="Váha" Margin="10" x:Name="vaha" Grid.ColumnSpan="2" Grid.Row="3" Grid.Column="0"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
       <Button Clicked="pridat" Margin="10" Text="Add" Grid.ColumnSpan="2" Grid.Row="3" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" />
 
 
