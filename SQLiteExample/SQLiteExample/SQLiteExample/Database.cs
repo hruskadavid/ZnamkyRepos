@@ -26,7 +26,7 @@ namespace SQLiteExample
         {
             return database.QueryAsync<Znamka>("SELECT * FROM [Znamky.db3] WHERE [Predmet] = " + predmet);
         }
-
+        
         public Task<Znamka> GetItemAsync(int id)
         {
             return database.Table<Znamka>().Where(i => i.ID == id).FirstOrDefaultAsync();

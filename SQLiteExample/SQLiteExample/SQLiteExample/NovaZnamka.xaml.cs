@@ -55,6 +55,9 @@ namespace SQLiteExample
                 App.Database.SaveItemAsync(item);
                 //vrat se na domovskou obrazovku
                 Navigation.PopModalAsync();
+            } else
+            {
+                DisplayAlert("Upozornění", " Vyplňte všechny " + " hodnoty", "OK");
             }
         }
     }
