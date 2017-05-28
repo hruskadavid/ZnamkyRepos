@@ -11,18 +11,14 @@ namespace SQLiteExample
 {
     public partial class NovaZnamka : ContentPage
     {
-        public class ZnamkaCislo
-        {
-            public string CoZnamka { get; set; }
-            public override string ToString()
-            {
-                return CoZnamka;
-            }
-        }
-        
+
+
         ObservableCollection<ZnamkaCislo> Znamky = new ObservableCollection<ZnamkaCislo>();
         private string lel;
-
+        public void zpet(object sender, EventArgs args)
+        {
+            Navigation.PopModalAsync();
+        }
         public NovaZnamka()
         {
 
@@ -36,9 +32,8 @@ namespace SQLiteExample
         }
         void SelectedItemMethod(object sender, SelectedItemChangedEventArgs e)
         {
-            
-             lel = e.SelectedItem.ToString();
-            //((ListView)sender).SelectedItem = null; //uncomment line if you want to disable the visual selection state.
+
+            lel = e.SelectedItem.ToString();
         }
         public void ulozit(object sender, EventArgs args)
         {
@@ -48,16 +43,19 @@ namespace SQLiteExample
             Database userDatabase = App.Database;
 
             //list pro dočasne uložení
-            
-            Znamka item = new Znamka();
-            item.Hodnoceni = Convert.ToInt16(lel);
-            item.Predmet = predmet.Text;
-            item.Vaha = Convert.ToInt16(vaha.Text);
+            if (lel != null && predmet.Text != null && vaha.Text != null)
+            {
+                Znamka item = new Znamka();
+                item.Hodnoceni = Convert.ToInt16(lel);
+                item.Predmet = predmet.Text;
+                item.Vaha = Convert.ToInt16(vaha.Text);
 
-            //zapis dat do db
-            App.Database.SaveItemAsync(item);
-            //vrat se na domovskou obrazovku
-            Navigation.PopModalAsync();
+
+                //zapis dat do db
+                App.Database.SaveItemAsync(item);
+                //vrat se na domovskou obrazovku
+                Navigation.PopModalAsync();
+            }
         }
     }
 }

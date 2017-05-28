@@ -2,57 +2,63 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SQLiteExample.rychloPocet">
-  <ContentPage.Content>
-    <Grid Margin="0, 15, 0, 0">
-      <Grid.ColumnDefinitions >
-        <ColumnDefinition Width="*"/>
-      </Grid.ColumnDefinitions>
+    <ContentPage.Content>
+        <Grid Margin="0, 15, 0, 0">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-      <Grid.RowDefinitions>
-        <RowDefinition Height="*"/>
-        <RowDefinition Height="5*"/>
-        <RowDefinition Height="*"/>
-        <RowDefinition Height="*"/>
-      </Grid.RowDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-      <Label Text="Rychlo průmer" Grid.Row="0" Grid.Column="0" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" />
-      <Button Clicked="zpet" Text="Zpet" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+            <Label Text="Rychlo průměr" Grid.Row="0" Grid.Column="0" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" />
+            <Button Clicked="zpet" Text="Zpět" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
 
-      <ListView x:Name="ListViewFormatted" Grid.Row="1" Grid.Column="0" IsGroupingEnabled="false" Grid.ColumnSpan="2" IsPullToRefreshEnabled = "false">
-        <ListView.ItemTemplate>
-          <DataTemplate>
-            <ViewCell>
-              <Grid HeightRequest="30">
-                <Grid.RowDefinitions>
-                  <RowDefinition Height="*" />
-                  <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                  <ColumnDefinition Width="*"/>
-                  <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+            <ListView x:Name="ListViewFormatted" Grid.Row="1" Grid.Column="0" IsGroupingEnabled="false" Grid.ColumnSpan="2" IsPullToRefreshEnabled = "false">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid HeightRequest="30">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
 
-                <Label Text="Znamka:" Grid.Row="0"  Grid.Column="0" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
-                <Label Text="{Binding Hodnoceni}" Grid.Row="1"  Grid.Column="0" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
+                                <Label Text="Znamka:" Grid.Row="0"  Grid.Column="0" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
+                                <Label Text="{Binding Hodnoceni}" Grid.Row="1"  Grid.Column="0" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
 
-                <Label Text="Váha:" Grid.Row="0"  Grid.Column="1" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
-                <Label Text="{Binding Vaha}" Grid.Row="1"  Grid.Column="1" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
+                                <Label Text="Váha:" Grid.Row="0"  Grid.Column="1" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
+                                <Label Text="{Binding Vaha}" Grid.Row="1"  Grid.Column="1" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
 
-              </Grid>
-            </ViewCell>
-          </DataTemplate>
-        </ListView.ItemTemplate>
-      </ListView>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
 
-      <Label Text="Pruměr je:" Grid.Row="2" Grid.Column="0" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
-      <Label x:Name="prumer" Text="0" Grid.Row="2" Grid.Column="1" FontSize="25" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" />
+            <Label Text="Pruměr je:" Grid.Row="2" Grid.Column="0" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
+            <Label x:Name="prumer" Text="0" Grid.Row="2" Grid.Column="1" FontSize="25" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold" />
 
-      <Entry Placeholder="Známka"  Margin="10" x:Name="hodnoceni" Grid.ColumnSpan="2" Grid.Row="3" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" />
-      <Entry Placeholder="Váha" Margin="10" x:Name="vaha" Grid.ColumnSpan="2" Grid.Row="3" Grid.Column="0"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-      <Button Clicked="pridat" Margin="10" Text="Add" Grid.ColumnSpan="2" Grid.Row="3" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" />
+            <ListView ItemSelected="SelectedItemMethod" x:Name="ZnamkyView" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" WidthRequest="50">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding CoZnamka}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Entry Keyboard="Numeric" Placeholder="Váha" Margin="10" x:Name="vaha" Grid.ColumnSpan="2" Grid.Row="3" Grid.Column="0"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            <Button Clicked="pridat" Margin="10" Text="Přidat" Grid.ColumnSpan="2" Grid.Row="3" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" />
 
 
 
-    </Grid>
-  </ContentPage.Content>
+        </Grid>
+    </ContentPage.Content>
 </ContentPage>

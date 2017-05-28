@@ -50,6 +50,7 @@
       <DependentUpon>rychloPocet.xaml</DependentUpon>
     </Compile>
     <Compile Include="Znamka.cs" />
+    <Compile Include="ZnamkaCislo.cs" />
     <Compile Include="ZnamkyPage.xaml.cs">
       <DependentUpon>ZnamkyPage.xaml</DependentUpon>
     </Compile>

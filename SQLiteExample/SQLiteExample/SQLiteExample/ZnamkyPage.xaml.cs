@@ -56,10 +56,7 @@ namespace SQLiteExample
                 List<Znamka> prumer = Znamky.FindAll(s => s.Predmet == item && s.Hodnoceni != 0);
                 cpredmet.Znamek = prumer.Count();
                 cpredmet.Prumer = Math.Round(prumer.Average(x => x.PravaZnamka()), 2);
-                System.Diagnostics.Debug.WriteLine(Math.Round(prumer.Average(x => x.PravaZnamka()), 2) / 10);
-                System.Diagnostics.Debug.WriteLine("derp" + cpredmet.Prumer + "derp");
                 cpredmet.Predmet = item;
-                //cpredmet.Absence = Znamky.Count(s => s.Hodnoceni == 0);
                 Vys.Add(cpredmet);
 
             }

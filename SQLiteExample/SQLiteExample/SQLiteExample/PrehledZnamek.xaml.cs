@@ -55,7 +55,7 @@ namespace SQLiteExample
             //vrat se na domovskou obrazovku
             fill();
             //hlaška
-            DisplayAlert("Smazano", "Prvek s ID: " + derp + " byl smazán.", "OK");
+            DisplayAlert("Smazáno", "Prvek s ID: " + derp + " byl smazán.", "OK");
         }
 
     }

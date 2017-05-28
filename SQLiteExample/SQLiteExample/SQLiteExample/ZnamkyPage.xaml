@@ -24,7 +24,7 @@
           <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Label Text="Znamky" Grid.Row="0" Grid.Column="0" FontSize="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" Margin="10"/>
+        <Label Text="Známky" Grid.Row="0" Grid.Column="0" FontSize="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" Margin="10"/>
         <Button Clicked="rychloPocet" Text="Rychlý průměr" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
       </Grid>
 
@@ -52,8 +52,7 @@
                 <Label Text="Průměr:" Grid.Row="0"  Grid.Column="2" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
                 <Label Text="{Binding Prumer}" Grid.Row="1"  Grid.Column="2" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
 
-                <Label Text="Absence:" Grid.Row="0"  Grid.Column="3" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
-                <Label Text="{Binding Absence}" Grid.Row="1"  Grid.Column="3" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
+               
 
 
               </Grid>

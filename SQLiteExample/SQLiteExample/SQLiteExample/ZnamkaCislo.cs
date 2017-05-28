@@ -6,15 +6,12 @@ using System.Threading.Tasks;
 
 namespace SQLiteExample
 {
-    public class CPredmet
+    public class ZnamkaCislo
     {
-        public string Predmet { get; set; }
-        public double Prumer { get; set; }
-        public int Znamek { get; set; }
-
+        public string CoZnamka { get; set; }
         public override string ToString()
         {
-            return Predmet;
+            return CoZnamka;
         }
     }
 }

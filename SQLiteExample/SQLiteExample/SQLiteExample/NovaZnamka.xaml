@@ -2,21 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SQLiteExample.NovaZnamka">
-  <ContentPage.Content>
-    <Grid Margin="0, 15, 0, 0">
-      <Grid.ColumnDefinitions >
-        <ColumnDefinition Width="*"/>
-        <ColumnDefinition Width="1.3*"/>
-      </Grid.ColumnDefinitions>
+    <ContentPage.Content>
+        <Grid Margin="0, 15, 0, 0">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.3*"/>
+            </Grid.ColumnDefinitions>
 
-      <Grid.RowDefinitions>
-        <RowDefinition Height="*"/>
-        <RowDefinition Height="*"/>
-        <RowDefinition Height="*"/>
-        <RowDefinition Height="*"/>
-        <RowDefinition Height="*"/>
-        <RowDefinition Height="*"/>
-      </Grid.RowDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
             <ListView ItemSelected="SelectedItemMethod" x:Name="ZnamkyView" Grid.Row="1" Grid.Column="1">
                 <ListView.ItemTemplate>
@@ -25,22 +25,23 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Label Text="Přidat znamku" Grid.Row="0" Grid.Column="0" FontSize="39" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" />
-            <Button Clicked="ulozit" Text="Uložit" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+            <Label Text="Přidat znamku" Grid.Row="0" Grid.Column="0" FontSize="38" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" />
+            <Button Clicked="ulozit" Text="Uložit" Grid.Row="4" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+            <Button Clicked="zpet" Text="Zpět" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
 
             <Label Text="Znamka:" Grid.Row="1" Grid.Column="0" Margin="10" VerticalTextAlignment="Center" />
             <!--<Entry Keyboard="Numeric" Placeholder="2" Grid.Row="1" Grid.Column="1" x:Name="znamka" Margin="0, 10, 0, 10" />-->
 
             <Label Text="Váha:" Grid.Row="2" Grid.Column="0" Margin="10" VerticalTextAlignment="Center" />
-      <Entry Keyboard="Numeric" Placeholder="30" Grid.Row="2" Grid.Column="1" x:Name="vaha" HorizontalTextAlignment="Center" Margin="0, 10, 45, 10"/>
+            <Entry Keyboard="Numeric" Placeholder="30" Grid.Row="2" Grid.Column="1" x:Name="vaha" HorizontalTextAlignment="Center" Margin="0, 10, 45, 10"/>
 
-      <Label Text="Předmět:" Grid.Row="3" Grid.Column="0" Margin="10" VerticalTextAlignment="Center" />
-      <Entry Placeholder="M" Grid.Row="3" Grid.Column="1" x:Name="predmet" HorizontalTextAlignment="Center" Margin="0, 10, 45, 10"/>
-
-
-
-    </Grid>
+            <Label Text="Předmět:" Grid.Row="3" Grid.Column="0" Margin="10" VerticalTextAlignment="Center" />
+            <Entry Placeholder="M" Grid.Row="3" Grid.Column="1" x:Name="predmet" HorizontalTextAlignment="Center" Margin="0, 10, 45, 10"/>
 
 
-  </ContentPage.Content>
+
+        </Grid>
+
+
+    </ContentPage.Content>
 </ContentPage>
