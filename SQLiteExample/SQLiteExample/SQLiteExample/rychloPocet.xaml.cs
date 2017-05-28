@@ -32,11 +32,12 @@ namespace SQLiteExample
         }
         void SelectedItemMethod(object sender, SelectedItemChangedEventArgs e)
         {
-
+            //Vybírání známek z listview
             lel = e.SelectedItem.ToString();
         }
         public void pridat(object sender, EventArgs args)
         {
+            //Přidání známek do listu, 100% funkčnost na telefonu
             znamka.Add(new Znamka() { Hodnoceni = Convert.ToInt16(lel), Vaha = Convert.ToInt16(vaha.Text) });
 
             double y = znamka.Average(x => x.PravaZnamka());

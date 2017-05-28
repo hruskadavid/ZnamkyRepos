@@ -43,6 +43,7 @@ namespace SQLiteExample
         /// <param name="e">E.</param>
         public void OnDelete(object sender, EventArgs e)
         {
+            //100% funkčnost na telefonu
             var mi = ((MenuItem)sender);
 
             int derp = (int)mi.CommandParameter;

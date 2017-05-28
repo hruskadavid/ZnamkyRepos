@@ -32,7 +32,7 @@ namespace SQLiteExample
         }
         void SelectedItemMethod(object sender, SelectedItemChangedEventArgs e)
         {
-
+            //Vybírání známek z listview
             lel = e.SelectedItem.ToString();
         }
         public void ulozit(object sender, EventArgs args)
