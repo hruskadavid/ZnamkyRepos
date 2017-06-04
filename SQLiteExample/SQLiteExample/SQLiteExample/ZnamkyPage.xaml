@@ -1,69 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SQLiteExample.ZnamkyPage">
-  <ContentPage.Content>
-    <Grid >
-      <Grid.ColumnDefinitions >
-        <ColumnDefinition Width="*"/>
-      </Grid.ColumnDefinitions>
+             x:Class="SQLiteExample.ZnamkyPage"
+             BackgroundColor="#0E0B16">
+    <ContentPage.Content>
+        <Grid >
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-      <Grid.RowDefinitions>
-        <RowDefinition Height="2*"/>
-        <RowDefinition Height="7*"/>
-        <RowDefinition Height="*"/>
-      </Grid.RowDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="7*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-      <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
-        <Grid.ColumnDefinitions >
-          <ColumnDefinition Width="*"/>
-          <ColumnDefinition Width="0.6*"/>
-        </Grid.ColumnDefinitions>
-
-        <Grid.RowDefinitions>
-          <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <Label Text="Známky" Grid.Row="0" Grid.Column="0" FontSize="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" Margin="10"/>
-        <Button Clicked="rychloPocet" Text="Rychlý průměr" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-      </Grid>
-
-      <ListView x:Name="ListViewFormatted" ItemTapped="SelectedItemMethod" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="0" IsGroupingEnabled="false">
-        <ListView.ItemTemplate>
-          <DataTemplate>
-            <ViewCell>
-              <Grid HeightRequest="100">
-                <Grid.RowDefinitions>
-                  <RowDefinition Height="*" />
-                  <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                  <ColumnDefinition Width="*"/>
-                  <ColumnDefinition Width="*"/>
-                  <ColumnDefinition Width="*"/>
-                  <ColumnDefinition Width="*"/>
+            <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.6*"/>
                 </Grid.ColumnDefinitions>
 
-                <Label Text="{Binding Predmet}" Grid.RowSpan="2" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-                <Label Text="Znamek:" Grid.Row="0"  Grid.Column="1" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
-                <Label Text="{Binding Znamek}" Grid.Row="1"  Grid.Column="1" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
+                <Label Text="Známky" Grid.Row="0" Grid.Column="0" FontSize="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" Margin="10" TextColor="#E7DFDD"/>
+                <Button Clicked="rychloPocet" Text="Rychlý průměr" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="#E7DFDD" BackgroundColor="#471F76"/>
+            </Grid>
 
-                <Label Text="Průměr:" Grid.Row="0"  Grid.Column="2" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
-                <Label Text="{Binding Prumer}" Grid.Row="1"  Grid.Column="2" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
+            <ListView x:Name="ListViewFormatted" ItemTapped="SelectedItemMethod" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="0" IsGroupingEnabled="false">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid HeightRequest="100">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
 
-               
+                                <Label Text="{Binding Predmet}" Grid.RowSpan="2" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="#E7DFDD"/>
+
+                                <Label Text="Známek:" Grid.Row="0"  Grid.Column="1" FontSize="13" VerticalTextAlignment="Center"  HorizontalOptions="Center" TextColor="#E7DFDD"/>
+                                <Label Text="{Binding Znamek}" Grid.Row="1"  Grid.Column="1" FontSize="13" VerticalTextAlignment="Center"  HorizontalOptions="Center" TextColor="#E7DFDD"/>
+
+                                <Label Text="Průměr:" Grid.Row="0"  Grid.Column="2" FontSize="13" VerticalTextAlignment="Center"  HorizontalOptions="Center" TextColor="#E7DFDD"/>
+                                <Label Text="{Binding Prumer}" Grid.Row="1"  Grid.Column="2" FontSize="13" VerticalTextAlignment="Center"  HorizontalOptions="Center" TextColor="#E7DFDD"/>
 
 
-              </Grid>
-            </ViewCell>
-          </DataTemplate>
-        </ListView.ItemTemplate>
-      </ListView>
-
-      <Button Clicked="pridat" Margin="10" Text="Přidat" Grid.ColumnSpan="2" Grid.Row="2" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
 
 
-    </Grid>
-  </ContentPage.Content>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Clicked="pridat" Text="Přidat" Grid.ColumnSpan="2" Grid.Row="2" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="#E7DFDD" BackgroundColor="#471F76"/>
+
+
+        </Grid>
+    </ContentPage.Content>
 </ContentPage>

@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SQLiteExample.PrehledZnamek">
+             x:Class="SQLiteExample.PrehledZnamek"
+             BackgroundColor="#0E0B16">
     <ContentPage.Content>
         <Grid >
             <Grid.ColumnDefinitions >
@@ -23,8 +24,8 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Label Text="Známky" Grid.Row="0" Grid.Column="0" FontSize="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" Margin="10" />
-                <Button Clicked="zpet" Text="Zpět" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+                <Label Text="Známky" Grid.Row="0" Grid.Column="0" FontSize="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" Margin="10" TextColor="#E7DFDD"/>
+                <Button Clicked="zpet" Text="Zpět" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="#E7DFDD" BackgroundColor="#471F76"/>
             </Grid>
 
             <ListView x:Name="ListViewFormatted" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="0" IsGroupingEnabled="false">
@@ -33,7 +34,7 @@
                         <ViewCell>
                             <ViewCell.ContextActions>
                                 <MenuItem Clicked="OnDelete" CommandParameter="{Binding ID}"
-                   Text="Smazat" IsDestructive="True" />
+                   Text="Smazat" IsDestructive="True"/>
                             </ViewCell.ContextActions>
 
                             <Grid HeightRequest="100">
@@ -45,16 +46,15 @@
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <Label Text="{Binding Predmet}" Grid.RowSpan="2" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                                <Label Text="{Binding Predmet}" Grid.RowSpan="2" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="#E7DFDD"/>
 
-                                <Label Text="Známka:" Grid.Row="0"  Grid.Column="1" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
-                                <Label Text="{Binding Hodnoceni}" Grid.Row="1"  Grid.Column="1" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
+                                <Label Text="Známka:" Grid.Row="0"  Grid.Column="1" FontSize="13" VerticalTextAlignment="Center"  HorizontalOptions="Center" TextColor="#E7DFDD"/>
+                                <Label Text="{Binding Hodnoceni}" Grid.Row="1"  Grid.Column="1" FontSize="13" VerticalTextAlignment="Center"  HorizontalOptions="Center" TextColor="#E7DFDD"/>
 
-                                <Label Text="Váha:" Grid.Row="0"  Grid.Column="2" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
-                                <Label Text="{Binding Vaha}" Grid.Row="1"  Grid.Column="2" FontSize="11" VerticalTextAlignment="Center"  HorizontalOptions="Center"/>
+                                <Label Text="Váha:" Grid.Row="0"  Grid.Column="2" FontSize="13" VerticalTextAlignment="Center"  HorizontalOptions="Center" TextColor="#E7DFDD"/>
+                                <Label Text="{Binding Vaha}" Grid.Row="1"  Grid.Column="2" FontSize="13" VerticalTextAlignment="Center"  HorizontalOptions="Center" TextColor="#E7DFDD"/>
 
 
                             </Grid>

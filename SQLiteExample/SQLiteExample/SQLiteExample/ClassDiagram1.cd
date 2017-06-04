@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SQLiteExample.ZnamkaCislo" Collapsed="true">
+    <Position X="3.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ZnamkaCislo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLiteExample.Znamka" Collapsed="true">
+    <Position X="7.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAgAAEAAAQAEAAAAIIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Znamka.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLiteExample.Database" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABACABAABAAAABAAAAAAAAAABAQAAA=</HashCode>
+      <FileName>Database.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLiteExample.CPredmet" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAEAAAAAQAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CPredmet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLiteExample.rychloPocet" Collapsed="true">
+    <Position X="5.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAgAAAAACAgAAAAAAAAAAAAAAQAAAABAA=</HashCode>
+      <FileName>rychloPocet.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLiteExample.NovaZnamka" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAgAAAAACAAAAAAAAAAAAAAAAQAAAABAA=</HashCode>
+      <FileName>NovaZnamka.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLiteExample.PrehledZnamek" Collapsed="true">
+    <Position X="3.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAIAAAAAAAAAAAAAAAAAgQAAAAAAA=</HashCode>
+      <FileName>PrehledZnamek.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLiteExample.ZnamkyPage" Collapsed="true">
+    <Position X="5.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgCgAAAAAAAgAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>ZnamkyPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xamarin.Forms.ContentPage" Collapsed="true">
+    <Position X="9.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="12.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="SQLiteExample.IFileHelper" Collapsed="true">
+    <Position X="3.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>IFileHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
